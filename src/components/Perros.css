@@ -1,0 +1,130 @@
+.perros-page {
+    padding: 30px;
+    background: #f1f5f9;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.perros-page h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.perros-page > p {
+    text-align: center;
+    color: #475569;
+}
+
+/* GALERIA */
+
+.perros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* TARJETAS */
+
+.perro-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px #00000015;
+}
+
+/* IMAGEN */
+
+.perro-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* INFORMACION */
+
+.perro-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.perro-info h3 {
+    color: #1e3a8a;
+    text-transform: capitalize;
+}
+
+.perro-info p {
+    color: #64748b;
+}
+
+/* CARGANDO */
+
+.cargando {
+    text-align: center;
+    color: #2563eb;
+    font-size: 18px;
+}
+
+/* ERROR */
+
+.error {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+/* PAGINACION */
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 35px 0;
+}
+
+.paginacion button {
+    background: white;
+    color: #1e3a8a;
+    border: 1px solid #2563eb;
+    padding: 10px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.paginacion button:hover:not(:disabled) {
+    background: #2563eb;
+    color: white;
+}
+
+.paginacion button.pagina-activa {
+    background: #1e3a8a;
+    color: white;
+}
+
+.paginacion button:disabled {
+    background: #cbd5e1;
+    color: #64748b;
+    cursor: not-allowed;
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .perros-page {
+        padding: 15px;
+    }
+
+    .perro-card img {
+        height: 200px;
+    }
+
+    .paginacion {
+        gap: 5px;
+    }
+
+}

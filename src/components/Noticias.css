@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+.noticias {
+    background: #f1f5f9;
+    min-height: 100vh;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.noticias h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 25px;
+}
+
+/* CATEGORIAS */
+.categoria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.categoria button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.categoria button:hover {
+    background: #1e40af;
+}
+
+.categoria button.activo {
+    background: #1e3a8a;
+    font-weight: bold;
+}
+
+/* LISTA DE NOTICIAS */
+.lista-noticias {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* TARJETAS */
+.noticias-card {
+    display: flex;
+    background: white;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px #00000015;
+}
+
+/* IMAGEN */
+.noticias-card img {
+    width: 300px;
+    min-height: 220px;
+    object-fit: cover;
+}
+
+/* INFORMACION */
+.noticia-info {
+    padding: 20px;
+    flex: 1;
+}
+
+.noticia-info small {
+    color: #64748b;
+}
+
+.noticia-info h3 {
+    color: #1e293b;
+    margin: 10px 0;
+}
+
+.noticia-info p {
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* ENLACE */
+.noticia-info a {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.noticia-info a:hover {
+    background: #1e40af;
+}
+
+/* CARGANDO */
+.cargando {
+    text-align: center;
+    color: #2563eb;
+    font-size: 18px;
+}
+
+/* ERROR */
+.error {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+/* PAGINACION */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 35px 0;
+}
+
+.paginacion button {
+    background: white;
+    color: #1e3a8a;
+    border: 1px solid #2563eb;
+    padding: 10px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.paginacion button:hover:not(:disabled) {
+    background: #2563eb;
+    color: white;
+}
+
+.paginacion button.pagina-activa {
+    background: #1e3a8a;
+    color: white;
+}
+
+.paginacion button:disabled {
+    background: #cbd5e1;
+    color: #64748b;
+    border-color: #cbd5e1;
+    cursor: not-allowed;
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+
+    .noticias {
+        padding: 15px;
+    }
+
+    .noticias-card {
+        flex-direction: column;
+    }
+
+    .noticias-card img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .categoria {
+        gap: 8px;
+    }
+
+    .paginacion {
+        gap: 5px;
+    }
+}

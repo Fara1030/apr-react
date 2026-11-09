@@ -1,0 +1,59 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: #1e3a8a;
+    padding: 18px 25px;
+    color: white;
+}
+
+.navbar span {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.navbar div:first-child {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.nav-links button {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nav-links button:hover {
+    background: #3b82f6;
+}
+
+.nav-links button.seleccionado {
+    background: #2563eb;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+}
